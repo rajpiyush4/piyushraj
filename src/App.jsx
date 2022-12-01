@@ -4,7 +4,6 @@ import Loader from './Pages/Loader'
 import About from './Pages/About'
 import { Routes, Route, Link } from 'react-router-dom'
 import { ImageWrapper } from './Pages/Components/StyledComp'
-// import Projects from './Pages/Projects'
 import Home from './Pages/Home'
 import Projects from './Pages/Projects'
 
@@ -62,7 +61,7 @@ function App() {
                     height: '600px',
 
 
-                  }} src='src\assets\me.jpeg' alt="" />
+                  }} src='./src\assets\me.jpeg' alt="" />
                 </ImageWrapper>
               </div>
 
