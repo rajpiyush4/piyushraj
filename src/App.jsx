@@ -61,7 +61,7 @@ function App() {
                     height: '600px',
 
 
-                  }} src='src\me.JPEG' alt="" />
+                  }} src='src\me.svg' alt="" />
                 </ImageWrapper>
               </div>
 
