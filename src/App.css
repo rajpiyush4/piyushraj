@@ -1,0 +1,235 @@
+*, *::after, *::before{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root{
+  --PrimaryFont : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --secondaryFontItalic : 'Newsreader', serif;
+  --secondaryFont : 'Newsreader', serif;
+  --PrimaryColor: #6f2089;
+  --secondaryColor: #F5F2FE;
+  --fontColor: rgba(0,0,0,.7)
+}
+body, html{
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--PrimaryFont);
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eef1ef;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .3);
+  border-radius: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#root{
+  width: 100%;
+  min-height: 100vh;
+}
+.App{
+  min-height: 100vh;
+  margin: auto;
+  width: 80%;
+  opacity: 0;
+  animation: opacityAnime .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+ /* loader */
+.loader{
+  position:fixed;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--PrimaryColor);
+  display: grid;
+  place-content: center;
+  animation: up .7s 2.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  z-index: 999;
+}
+.loader-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondaryColor);
+  display: grid;
+  place-content: center;
+  animation: up 1s 2.4s ease-out forwards;
+}
+
+.loader-animation-container{
+  height: 100px;
+  overflow-y:hidden;
+}
+
+.char{
+  position: relative;
+  transform: translate(0, 100%);
+  transition: .5s;
+  opacity: 0;
+}
+
+nav{
+  position: relative;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: heightAnime .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.logo{
+   font-weight: 700;
+   z-index: 100;
+   cursor: pointer;
+   transition: .3s;
+   color: var(--PrimaryColor);
+   letter-spacing: 2px;
+}
+
+.logo .imgWrapper3{
+  opacity: 0;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events: none;
+  z-index: -1;
+  
+}
+
+.logo:hover .imgWrapper3 {
+  opacity: 1;
+}
+
+
+
+.logo:hover .clipon{
+  width: 300px;
+  height: 300px;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li:not(:first-child){
+  margin-left: 1.5rem;
+}
+.underline{
+  background-image: linear-gradient(#212121, #212121) ;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0px 2px;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+  border-radius: 1px;
+}
+.underline:hover{
+  background-size: 100% 2px;
+}
+
+.imgWrapper-wrapper::after{
+    content: '2022';
+    position: absolute;
+    color: hsl(28, 22%, 67%);
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%) rotateZ(270deg);
+}
+
+.intro{
+  display: inline-block;
+  text-align: center;
+width: 100%;
+  font-family:var(--secondaryFontItalic);
+  word-spacing: .5rem;
+}
+
+.intro-words{
+  font-weight: 400;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  transform: translate(0, 100%);
+  
+}
+
+.hrline{
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  animation: fullWidth .5s .5s ease forwards;
+}
+
+.home{
+  width: 100%;
+  height: 88vh;
+
+}
+
+/* projects */
+.projects{
+  width: 100%;
+  height: 100%;
+  /* display: grid;
+  place-content: center; */
+  padding: 2rem 0;
+  background-color: var(--secondaryColor);
+  position: relative;
+  /* z-index: 1; */
+}
+/* keyframes */
+
+@keyframes up{
+  100%{
+    transform:translate(0,-100%);
+  }
+}
+
+@keyframes heightAnime{
+  100%{
+    height: 5rem;
+    opacity: 1;
+  }
+}
+@keyframes opacityAnime{
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes clipanime{
+  100%{
+    width: 300px;
+    height: 300px;
+  }
+}
+@keyframes clipPath{
+  100%{
+    clip-path:  inset(0 0% round 0 0 0 0);
+  }
+}
+@keyframes fullWidth{
+  100%{
+    width: 100%;
+  }
+}
+
+
