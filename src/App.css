@@ -107,6 +107,7 @@ nav{
    transition: .3s;
    color: var(--PrimaryColor);
    letter-spacing: 2px;
+   user-select: none;
 }
 
 .logo .imgWrapper3{

@@ -261,7 +261,7 @@ export default function Home() {
 
   return (
     <div ref={scene} className="home" >
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: '3rem', color: '#212121'}}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: '3rem', color: '#212121', userSelect:'none'}}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
     </div>
   )
 }
