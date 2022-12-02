@@ -24,7 +24,6 @@ export default function Home() {
     window.addEventListener('touchstart', touchMove)
 
     function touchMove(e) {
-      console.log(e)
       // e.preventDefault()
       engine.gravity.y = -1
       engine.gravity.x = 0
@@ -240,6 +239,8 @@ export default function Home() {
 
 
     mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
+    // mouse.element.removeEventListener("mousedown", mouse.mousewheel);
+    // mouse.element.removeEventListener("mouseup", mouse.mousewheel);
     Composite.add(world, mouseConstraint);
 
 
@@ -270,7 +271,7 @@ export default function Home() {
       <div className="inst-icon"><i>i</i>
         <div className='instruction'>
           <div className='inst-container'>
-            <div>use these keys to make it more fun</div>
+            <div>use these keys to make it more fun (use keyboard)</div>
             <div> <i>j,k,l --</i> to move and stop</div>
             <div> <i>a,w,s,d --</i> to change the gravity </div>
           </div>
