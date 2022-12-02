@@ -124,22 +124,22 @@ export default function Home() {
     // create two boxes and a ground
     var ground = Bodies.rectangle(cw / 3, ch, cw + 500, 20, {
       isStatic: true,
-      render: { fillStyle: 'white', }
+      render: { fillStyle: 'transparent', }
     });
 
     var wallRight = Bodies.rectangle(cw - 10, ch / 2, 20, ch, {
       isStatic: true,
-      render: { fillStyle: 'white', }
+      render: { fillStyle: 'transparent', }
     });
 
     var wallLeft = Bodies.rectangle(0, ch / 2, 20, ch, {
       isStatic: true,
-      render: { fillStyle: 'white', }
+      render: { fillStyle: 'transparent', }
     });
 
     var ceiling = Bodies.rectangle(cw / 2, 0, cw, 20, {
       isStatic: true,
-      render: { fillStyle: 'white', }
+      render: { fillStyle: 'transparent', }
     });
 
     Composite.add(world, [box8, ground, wallRight, wallLeft, ceiling]);
