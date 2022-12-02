@@ -59,6 +59,12 @@ a{
   animation: opacityAnime .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
+@media only screen and (max-width: 600px) {
+  .App{
+    width: 100%;
+    min-height: 100vh;
+  }
+}
 
  /* loader */
 .loader{
@@ -170,7 +176,7 @@ width: 100%;
 
 .intro-words{
   font-weight: 400;
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-size: clamp(10px, 4vw, 3.5rem);
   transform: translate(0, 100%);
   
 }
