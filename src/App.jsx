@@ -60,7 +60,7 @@ function App() {
                     height: '600px',
 
 
-                  }} src='src\me.png' alt="" />
+                  }} src='./src/me.jpeg' alt="" />
                 </ImageWrapper>
               </div>
 
