@@ -5,11 +5,6 @@ import { Engine, World, Render, Bodies, Body, Common, Constraint, MouseConstrain
 
 
 
-function resize() {
-  window.location.reload()
-}
-
-
 
 export default function Home() {
   const scene = useRef(null)
@@ -24,6 +19,13 @@ export default function Home() {
     let cw = scene.current.clientWidth
     let ch = scene.current.clientHeight
     window.addEventListener('keypress', updateGravity)
+    window.addEventListener('touchstart', touchMove)
+
+      function touchMove(e) {
+        e.preventDefault()
+        engine.gravity.y = -1
+        engine.gravity.x = 0
+      }
 
     function updateGravity(e) {
       if (e.key === 'w') {
@@ -57,6 +59,7 @@ export default function Home() {
         wireframes: false,
       }
     });
+
 
     // run the renderer
     Render.run(render);
@@ -103,7 +106,7 @@ export default function Home() {
     });
 
 
-    World.add(world, stack);
+    Composite.add(world, stack);
 
 
     let box8 = Bodies.rectangle(cw / 2, ch / 2 - 15, 250, 10, {
@@ -137,7 +140,7 @@ export default function Home() {
       render: { fillStyle: 'white', }
     });
 
-    World.add(world, [box8, ground, wallRight, wallLeft, ceiling]);
+    Composite.add(world, [box8, ground, wallRight, wallLeft, ceiling]);
 
 
     let wheel1 = Bodies.circle(cw / 2, ch / 2 - 300, 25, {
@@ -234,13 +237,30 @@ export default function Home() {
 
 
     mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
-    World.add(world, mouseConstraint);
+    Composite.add(world, mouseConstraint);
+
 
     //   // keep the mouse in sync with rendering
     render.mouse = mouse;
+    // Render.lookAt(render, Composite.allBodies(world));
 
-    window.addEventListener('resize', resize)
+    // window.addEventListener('resize', resize)
+    // function resize() {
+    //   cw = scene.current.clientWidth
+    //   ch = scene.current.clientHeight
+    //   console.log(cw, ch)
+    //   // render.bounds.max.x = cw;
+    //   // render.bounds.max.y = ch;
+    //   // render.options.width = cw;
+    //   // render.options.height = ch;
+    //   document.querySelector('canvas').width = cw
+    //   document.querySelector('canvas').height = ch
+    //   render.canvas.width = cw
+    //   render.canvas.height = ch
+    //   // Render.lookAt(render, Composite.allBodies(world));
+    // }
 
+    // window.addEventListener('resize', resize);
     // unmount
     return () => {
       // destroy Matter
@@ -251,7 +271,8 @@ export default function Home() {
       render.canvas = null
       render.context = null
       render.textures = {}
-      window.removeEventListener('resize', resize)
+      // window.removeEventListener('resize', resize)
+    window.removeEventListener('touchstart', touchMove)
       window.removeEventListener('keydown', moveCar)
       window.removeEventListener('keypress', updateGravity)
 
@@ -261,7 +282,7 @@ export default function Home() {
 
   return (
     <div ref={scene} className="home" >
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: '3rem', color: '#212121', userSelect:'none'}}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: 'clamp(1.5rem, 3vw, 3rem)', color: '#61764B', userSelect:'none'}}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
     </div>
   )
 }
