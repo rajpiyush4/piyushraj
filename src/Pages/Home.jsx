@@ -8,6 +8,8 @@ import { Engine, World, Render, Bodies, Body, Common, Constraint, MouseConstrain
 
 export default function Home() {
   const scene = useRef(null)
+  const instRef = useRef(null)
+  const state = useRef(false)
 
   useEffect(() => {
 
@@ -21,11 +23,12 @@ export default function Home() {
     window.addEventListener('keypress', updateGravity)
     window.addEventListener('touchstart', touchMove)
 
-      function touchMove(e) {
-        e.preventDefault()
-        engine.gravity.y = -1
-        engine.gravity.x = 0
-      }
+    function touchMove(e) {
+      console.log(e)
+      // e.preventDefault()
+      engine.gravity.y = -1
+      engine.gravity.x = 0
+    }
 
     function updateGravity(e) {
       if (e.key === 'w') {
@@ -240,27 +243,9 @@ export default function Home() {
     Composite.add(world, mouseConstraint);
 
 
-    //   // keep the mouse in sync with rendering
+    // keep the mouse in sync with rendering
     render.mouse = mouse;
-    // Render.lookAt(render, Composite.allBodies(world));
 
-    // window.addEventListener('resize', resize)
-    // function resize() {
-    //   cw = scene.current.clientWidth
-    //   ch = scene.current.clientHeight
-    //   console.log(cw, ch)
-    //   // render.bounds.max.x = cw;
-    //   // render.bounds.max.y = ch;
-    //   // render.options.width = cw;
-    //   // render.options.height = ch;
-    //   document.querySelector('canvas').width = cw
-    //   document.querySelector('canvas').height = ch
-    //   render.canvas.width = cw
-    //   render.canvas.height = ch
-    //   // Render.lookAt(render, Composite.allBodies(world));
-    // }
-
-    // window.addEventListener('resize', resize);
     // unmount
     return () => {
       // destroy Matter
@@ -272,7 +257,7 @@ export default function Home() {
       render.context = null
       render.textures = {}
       // window.removeEventListener('resize', resize)
-    window.removeEventListener('touchstart', touchMove)
+      window.removeEventListener('touchstart', touchMove)
       window.removeEventListener('keydown', moveCar)
       window.removeEventListener('keypress', updateGravity)
 
@@ -282,7 +267,16 @@ export default function Home() {
 
   return (
     <div ref={scene} className="home" >
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: 'clamp(1.5rem, 3vw, 3rem)', color: '#61764B', userSelect:'none'}}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
+      <div className="inst-icon"><i>i</i>
+        <div className='instruction'>
+          <div className='inst-container'>
+            <div>use these keys to make it more fun</div>
+            <div> <i>j,k,l --</i> to move and stop</div>
+            <div> <i>a,w,s,d --</i> to change the gravity </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '9999', fontSize: 'clamp(1.5rem, 3vw, 3rem)', color: '#61764B', userSelect: 'none' }}><span style={{ fontFamily: 'serif' }}>Hello</span> <i>there!</i></div>
     </div>
   )
 }
