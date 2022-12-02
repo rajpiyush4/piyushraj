@@ -47,7 +47,6 @@ function App() {
                 position: 'absolute',
                 padding: "2rem",
                 background: 'rgb(229 221 214)',
-                zIndex:'-1',
                 transform: `translate(${mousePosition.x - 100}px, ${mousePosition.y - 40}px)`
 
               }}>
@@ -61,7 +60,7 @@ function App() {
                     height: '600px',
 
 
-                  }} src='src\me.svg' alt="" />
+                  }} src='src\me.png' alt="" />
                 </ImageWrapper>
               </div>
 

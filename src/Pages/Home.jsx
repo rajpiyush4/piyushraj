@@ -8,8 +8,6 @@ import { Engine, World, Render, Bodies, Body, Common, Constraint, MouseConstrain
 
 export default function Home() {
   const scene = useRef(null)
-  const instRef = useRef(null)
-  const state = useRef(false)
 
   useEffect(() => {
 
@@ -55,7 +53,7 @@ export default function Home() {
       engine: engine,
       options: {
         pixelRatio: 2,
-        background: 'transparent',
+        background: '#EDEDED',
         width: cw,
         height: ch,
         wireframes: false,
