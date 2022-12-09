@@ -59,8 +59,8 @@ function App() {
                     width: '350px',
                     height: '600px',
 
-
-                  }} src='src\assets\me.JPEG' alt="" />
+                    // https://drive.google.com/file/d/1WX2SohrKjLAPRZE5kVDf-f9m6ixzNx2W/view?usp=share_link
+                  }} src='https://drive.google.com/uc?export=view&id=1WX2SohrKjLAPRZE5kVDf-f9m6ixzNx2W' alt="" />
                 </ImageWrapper>
               </div>
 
