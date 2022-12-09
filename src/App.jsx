@@ -5,7 +5,7 @@ import About from './Pages/About'
 import { Routes, Route, Link } from 'react-router-dom'
 import { ImageWrapper } from './Pages/Components/StyledComp'
 import Home from './Pages/Home'
-import Projects from './Pages/Projects'
+import Projects from './Pages/Project/Projects'
 
 
 
@@ -60,7 +60,7 @@ function App() {
                     height: '600px',
 
 
-                  }} src='./src/me.jpeg' alt="" />
+                  }} src='src\assets\me.JPEG' alt="" />
                 </ImageWrapper>
               </div>
 

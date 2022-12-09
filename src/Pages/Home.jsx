@@ -68,18 +68,18 @@ export default function Home() {
       let ball = Bodies.circle(Math.random() * cw + 200, Math.random() * ch / 2, Math.random() * 20, {
         restitution: .7,
         friction: 1,
-        plugin: {
-          wrap: {
-            min: {
-              x: 0,
-              y: 0
-            },
-            max: {
-              x: cw,
-              y: ch
-            }
-          }
-        },
+        // plugin: {
+        //   wrap: {
+        //     min: {
+        //       x: 0,
+        //       y: 0
+        //     },
+        //     max: {
+        //       x: cw,
+        //       y: ch
+        //     }
+        //   }
+        // },
         render: {
           fillStyle: 'purple',
           lineWidth: 0
@@ -88,19 +88,19 @@ export default function Home() {
       Composite.add(world, [ball])
     }
 
-    let stack = Composites.stack(500, ch / 2 + 230, 5, 5, 0, 0, function (x, y) {
+    let stack = Composites.stack(cw/2, ch / 2, 5, 5, 0, 0, function (x, y) {
       return Bodies.rectangle(x, y, Common.random(10, 20), 20, {
         friction: .5, restitution: 1, density: 0.001, plugin: {
-          wrap: {
-            min: {
-              x: 0,
-              y: 0
-            },
-            max: {
-              x: cw,
-              y: ch
-            }
-          }
+          // wrap: {
+          //   min: {
+          //     x: 0,
+          //     y: 0
+          //   },
+          //   max: {
+          //     x: cw,
+          //     y: ch
+          //   }
+          // }
         },
       });
     });
@@ -145,18 +145,18 @@ export default function Home() {
 
     let wheel1 = Bodies.circle(cw / 2, ch / 2 - 300, 25, {
       isStatic: false, restitution: 0, friction: 1, mass: 1,
-      plugin: {
-        wrap: {
-          min: {
-            x: 0,
-            y: 0
-          },
-          max: {
-            x: cw,
-            y: ch
-          }
-        }
-      },
+      // plugin: {
+      //   wrap: {
+      //     min: {
+      //       x: 0,
+      //       y: 0
+      //     },
+      //     max: {
+      //       x: cw,
+      //       y: ch
+      //     }
+      //   }
+      // },
       render: {
         fillStyle: '#395B64',
       }
