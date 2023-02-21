@@ -19,6 +19,7 @@
 } */
 
 .hi{
+    position: relative;
     height: 100%;
     background: #4C0033;
     color: whitesmoke;

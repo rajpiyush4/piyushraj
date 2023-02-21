@@ -147,8 +147,6 @@ nav {
   opacity: 1;
 }
 
-
-
 .logo:hover .clipon {
   width: 300px;
   height: 300px;
@@ -260,6 +258,24 @@ nav ul li:not(:first-child) {
 
 }
 
+.funclicks{
+  display: none;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: .5rem 1rem;
+  background: beige;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, .2);
+  transform: scale(.5,.5);
+}
+
+.funclicks2{
+ right: 4rem;
+ background: rgb(247, 245, 136);
+}
+
 /* projects */
 
 @media only screen and (max-width: 600px) {
@@ -343,4 +359,9 @@ nav ul li:not(:first-child) {
   .hrline{
     top: 4.8rem;
   }
+
+  .funclicks{
+    display: block;
+  }
+
 }

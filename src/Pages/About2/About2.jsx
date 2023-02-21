@@ -35,8 +35,8 @@ function About2() {
   return (
     <div className='about2'>
      {page}
-     {/* <button style={{position:'absolute',top:'0'}} onClick={next}>next</button>
-     <button style={{position:'absolute',top:'2rem'}}  onClick={back}>back</button> */}
+     <button className='funclicks funclicks1' onClick={next}>Next</button>
+     <button className='funclicks funclicks2' onClick={back}>Prev</button>
     </div>
   )
 }
