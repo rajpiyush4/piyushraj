@@ -6,12 +6,15 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { ImageWrapper } from './Pages/Components/StyledComp'
 import Home from './Pages/Home'
 import Projects from './Pages/Project/Projects'
+import About2 from './Pages/About2/About2'
+
 
 
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
  
+  
 
   function useMousePos(e) {
     setMousePosition({ x: e.clientX, y: e.clientY })
@@ -66,12 +69,16 @@ function App() {
 
             </div>
             </div>
-          <ul>
+
+          <ul className='nav1'>
             <li className='underline'>
               <Link to='/'>Home</Link>
             </li>
             <li className='underline'>
               <Link to='/about'>About</Link>
+            </li>
+            <li className='underline'>
+              <Link to='/about2'>Aese hi</Link>
             </li>
             <li className='underline'>
               <Link to='/project'>Project</Link>
@@ -81,13 +88,32 @@ function App() {
         </nav>
 
 
+
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/about2' element={<About2 />} />
           <Route path='/project' element={<Projects />} />
         </Routes>
 
 
+        <footer style={{position:'fixed', bottom:'0', left:'0', background:'whitesmoke', height:'5rem', width:'100%'}}  >
+        <ul className='nav2'>
+            <li className='underline'>
+              <Link to='/'>Home</Link>
+            </li>
+            <li className='underline'>
+              <Link to='/about'>About</Link>
+            </li>
+            <li className='underline'>
+              <Link to='/about2'>Aese hi</Link>
+            </li>
+            <li className='underline'>
+              <Link to='/project'>Project</Link>
+            </li>
+          </ul>
+        </footer>
 
 
       </div>

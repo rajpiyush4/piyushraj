@@ -46,10 +46,10 @@ function Loader() {
     }, [])
 
     return (
-        <div className='loader' >
+        <div className='loader'>
             <div className='loader-container'>
                 <div className='loader-animation-container'>
-                    <div style={{ display: 'flex', alignItems: 'flex-end' }}><span style={{ fontFamily: '"Newsreader", serif', marginRight: '1.5rem', fontWeight: '600', fontSize: '5rem', color: '#6f2089' }} ref={splitRef1}><i>I'm</i> </span><span ref={splitRef2} style={{ fontSize: '2.5rem', fontFamily: '"Newsreader", serif', color: 'rgba(0,0,0,.7)', fontWeight: '900' }}>Batman!</span></div>
+                    <div style={{ display: 'flex', alignItems: 'flex-end' }}><span style={{ fontFamily: '"Newsreader", serif', marginRight: '1.5rem', fontWeight: '600', fontSize: '5rem', color: '#6f2089' }} ref={splitRef1}><i>I'm</i> </span><span ref={splitRef2} style={{ fontSize: '2.5rem', fontFamily: '"Newsreader", serif', color: 'whitesmoke', fontWeight: '900' }}>Batman?</span></div>
                 </div>
             </div>
         </div>

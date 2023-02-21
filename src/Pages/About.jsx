@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import SplitType from 'split-type'
-import gsap, { Power3 } from 'gsap'
+import gsap from 'gsap'
 import { RevealContainer } from './Components/StyledComp'
 
 function About() {
@@ -15,8 +15,7 @@ function About() {
       y: 0,
       stagger: .05,
       delay: .1,
-      duration: 1,
-      ease: Power3.easeInOut
+      duration: .5,
 
     })
 
@@ -24,16 +23,16 @@ function About() {
   }, [])
 
   return (
-    <div className='home' style={{ position: 'relative', height: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className='about' style={{ position: 'relative', height: '100vh', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent:'center',color:'whitesmoke', background:'#6f2089' }}>
 
-      <section style={{ display: 'flex', flexDirection: 'column', height: '65vh', alignItems: 'center', justifyContent: 'center' }}>
-        <i>Hello there</i>
+      <section style={{ display: 'flex', flexDirection: 'column', height: '65vh' }}>
+        <i style={{textAlign:'center'}}>Hello there</i>
         <br />
         <div style={{width:'fit-content'}}>
         <RevealContainer><span className='intro'> I'm <i>Piyush Raj</i>, CSE undergrad '24 </span></RevealContainer>
         <RevealContainer><span className='intro'><i></i>  Love to create and code websites with  </span></RevealContainer>
-        <RevealContainer><span className='intro'><i></i>delightful and userfriendly animations and flow.  </span></RevealContainer>
-        <RevealContainer><span className='intro'><i></i>which are fast and optimised.</span></RevealContainer>
+        <RevealContainer><span className='intro'><i></i>delightful and userfriendly   </span></RevealContainer>
+        <RevealContainer><span className='intro'><i></i>animations</span></RevealContainer>
         </div>
       </section>
 

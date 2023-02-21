@@ -1,0 +1,77 @@
+.Project {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem 2rem;
+}
+
+.project-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.project-wrapper {
+    position: relative;
+    width: clamp(300px, 100%, 700px);
+    height: 500px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    transition: .5s ease-out;
+    clip-path: inset(70% 0% 0 0);
+}
+
+
+.project-wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.3, .3);
+    transition: .5s ease-out;
+    
+}
+.project-wrapper:hover img{
+    transform: translate(-50%, -50%) scale(.4, .4);
+}
+.project-wrapper:hover {
+    transform: scale(.9, .9);
+}
+
+.project-wrapper1 {
+    background-color: #274042;
+
+}
+
+.project-wrapper2 {
+    background-color: #e5dcd4;
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+}
+
+.project-wrapper3 {
+    background-color: #26605b;
+    grid-row: 3/4;
+}
+
+
+
+@keyframes clip {
+    100% {
+        clip-path: inset(0 0% 0 0);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Project{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -16,8 +16,8 @@ export default function Home() {
     var engine = Engine.create()
     let world = engine.world;
 
-    let cw = scene.current.clientWidth
-    let ch = scene.current.clientHeight
+    let cw = scene.current.clientWidth -2
+    let ch = scene.current.clientHeight -2
     window.addEventListener('keypress', updateGravity)
     window.addEventListener('touchstart', touchMove)
 
@@ -53,7 +53,7 @@ export default function Home() {
       engine: engine,
       options: {
         pixelRatio: 2,
-        background: '#EDEDED',
+        background: '#2D2424',
         width: cw,
         height: ch,
         wireframes: false,
@@ -68,18 +68,6 @@ export default function Home() {
       let ball = Bodies.circle(Math.random() * cw + 200, Math.random() * ch / 2, Math.random() * 20, {
         restitution: .7,
         friction: 1,
-        // plugin: {
-        //   wrap: {
-        //     min: {
-        //       x: 0,
-        //       y: 0
-        //     },
-        //     max: {
-        //       x: cw,
-        //       y: ch
-        //     }
-        //   }
-        // },
         render: {
           fillStyle: 'purple',
           lineWidth: 0
@@ -91,16 +79,6 @@ export default function Home() {
     let stack = Composites.stack(cw/2, ch / 2, 5, 5, 0, 0, function (x, y) {
       return Bodies.rectangle(x, y, Common.random(10, 20), 20, {
         friction: .5, restitution: 1, density: 0.001, plugin: {
-          // wrap: {
-          //   min: {
-          //     x: 0,
-          //     y: 0
-          //   },
-          //   max: {
-          //     x: cw,
-          //     y: ch
-          //   }
-          // }
         },
       });
     });
@@ -143,38 +121,15 @@ export default function Home() {
     Composite.add(world, [box8, ground, wallRight, wallLeft, ceiling]);
 
 
-    let wheel1 = Bodies.circle(cw / 2, ch / 2 - 300, 25, {
+    let wheel1 = Bodies.circle(cw / 2, ch  - 200, 25, {
       isStatic: false, restitution: 0, friction: 1, mass: 1,
-      // plugin: {
-      //   wrap: {
-      //     min: {
-      //       x: 0,
-      //       y: 0
-      //     },
-      //     max: {
-      //       x: cw,
-      //       y: ch
-      //     }
-      //   }
-      // },
+     
       render: {
         fillStyle: '#395B64',
       }
     })
-    let wheel2 = Bodies.circle(cw / 2 + 30, ch / 2 - 200, 20, {
+    let wheel2 = Bodies.circle(cw / 2 + 30, ch  - 100, 20, {
       isStatic: false, restitution: 0, friction: 1, mass: 1,
-      plugin: {
-        wrap: {
-          min: {
-            x: 0,
-            y: 0
-          },
-          max: {
-            x: cw,
-            y: ch
-          }
-        }
-      },
       render: {
         fillStyle: '#A5C9CA',
 
@@ -188,7 +143,6 @@ export default function Home() {
       length: 50,
       render: {
         visible: true,
-        // type:'pin',
       }
     })
 

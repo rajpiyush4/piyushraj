@@ -12,6 +12,7 @@
   --secondaryFont: 'Newsreader', serif;
   --PrimaryColor: #6f2089;
   --secondaryColor: #F5F2FE;
+  --secondaryColor2: #15131b;
   --fontColor: rgba(0, 0, 0, .7)
 }
 
@@ -51,17 +52,29 @@ a {
   color: inherit;
 }
 
+.reveal-text{
+  transform: translate(0,100%);
+  animation: revealText .4s .3s forwards;  
+}
+@keyframes revealText{
+  100%{
+    transform: translate(0,0);
+  }
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
 }
 
 .App {
+  position: relative;
   min-height: 100vh;
   margin: auto;
-  width: 80%;
+  width: 100%;
   opacity: 0;
   animation: opacityAnime .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  /* border-left: #0E5E6F 2px solid; */
 }
 
 
@@ -81,7 +94,7 @@ a {
 .loader-container {
   width: 100vw;
   height: 100vh;
-  background-color: var(--secondaryColor);
+  background-color: var(--secondaryColor2);
   display: grid;
   place-content: center;
   animation: up 1s 2.4s ease-out forwards;
@@ -106,8 +119,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
   animation: heightAnime .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   z-index: 999;
+  background-color : white;
 }
 
 .logo {
@@ -139,6 +154,9 @@ nav {
   height: 300px;
 }
 
+.nav2{
+display: none;
+}
 
 nav ul {
   list-style: none;
@@ -165,7 +183,7 @@ nav ul li:not(:first-child) {
 
 .inst-icon {
   position: absolute;
-  right: 0rem;
+  right: 2rem;
   top: 1rem;
   width: 30px;
   height: 30px;
@@ -202,8 +220,6 @@ nav ul li:not(:first-child) {
 
 }
 
-
-
 .imgWrapper-wrapper::after {
   content: '2022';
   position: absolute;
@@ -225,8 +241,9 @@ nav ul li:not(:first-child) {
   font-weight: 400;
   font-size: clamp(10px, 4vw, 3.5rem);
   transform: translate(0, 100%);
-
+  opacity: 1;
 }
+
 
 .hrline {
   position: absolute;
@@ -239,88 +256,11 @@ nav ul li:not(:first-child) {
 .home {
   position: relative;
   width: 100%;
-  height: 88vh;
+  height: calc(100vh - 10rem);
 
 }
 
 /* projects */
-.projects {
-  width: 100%;
-  height: 100%;
-  background-color: var(--secondaryColor);
-  position: relative;
-
-}
-html.has-scroll-smooth {
-  overflow: hidden; }
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.has-scroll-smooth body {
-  overflow: hidden; }
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh; }
-
-[data-scroll-direction="horizontal"] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap; }
-
-[data-scroll-direction="horizontal"] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%; }
-
-.c-scrollbar {
-  position: relative;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0; }
-  .c-scrollbar:hover {
-    transform: scaleX(1.45); }
-  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
-    opacity: 1; }
-  [data-scroll-direction="horizontal"] .c-scrollbar {
-    width: 100%;
-    height: 10px;
-    top: auto;
-    bottom: 0;
-    transform: scaleY(1); }
-    [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-      transform: scaleY(1.3); }
-
-.c-scrollbar_thumb {
-  position: relative;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab; }
-  .has-scroll-dragging .c-scrollbar_thumb {
-    cursor: -webkit-grabbing;
-    cursor: grabbing; }
-  [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-    right: auto;
-    bottom: 0; }
-
-section div{
-  position: relative;
-  left: 0;
-}
 
 @media only screen and (max-width: 600px) {
   .App {
@@ -374,5 +314,33 @@ section div{
 @keyframes fullWidth {
   100% {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav{
+    display: grid;
+    place-content: center;
+  }
+  footer{
+    display: grid;
+    place-content: center;
+  }
+  .nav1  {
+   display: none;
+  }
+  
+  .nav2{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav2 li{
+    margin-inline: 1rem;
+  }
+  .hrline{
+    top: 4.8rem;
   }
 }
