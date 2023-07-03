@@ -8,14 +8,14 @@ let projects = [
     name: "The soul project",
     description: "A project to help the soul",
     tech: "html, css , vanilla js, html5 canvas",
-    img: 'src/assets/soul.jpeg',
+    img: '/public/static/images/soul.jpeg',
     link: "https://github.com/rajpiyush4/sound-env"
   },
   {
     id: "2",
     name: "The WeMatched! project",
     description: "A project (a dating website) that helps you to find your match: (worked as ui engineer)",
-    img: "src/assets/wematched.jpeg",
+    img: "/public/static/images/wematched.jpeg",
     tech: "react.js, node.js, express.js, socket.io, mongodb, google-auth"
   },
   {
@@ -23,7 +23,7 @@ let projects = [
     name: "The css-position project",
     description: "A project that helps you to visualise and understand css position",
     tech: "html, css, vanilla js",
-    img: 'src/assets/cssPositionViz.png',
+    img: '/public/static/images/cssPositionViz.png',
     link:"https://github.com/rajpiyush4/cssPositionVis"
   },
   {
@@ -31,7 +31,7 @@ let projects = [
     name: "this portfolio",
     description: "to help me in my branding and to show my work",
     tech: "react.js, gsap, graphql, apollo-server, mongodb",
-    img: "src/assets/pf.jpeg",
+    img: "/public/static/images/pf.jpeg",
     link: "https://github.com/rajpiyush4/piyushraj"
   }
 
