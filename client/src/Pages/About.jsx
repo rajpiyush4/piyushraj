@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react'
+import Projects from './Project/Projects'
+import Contact from './Contact'
+import Skills from './Skills'
 // import SplitType from 'split-type'
 // import gsap from 'gsap'
 // import { RevealContainer } from './Components/StyledComp'
-import Projects from './Project/Projects'
 
 function About() {
   // const introRef = useRef(null)
@@ -24,7 +26,10 @@ function About() {
 
   return (
     <main className='about' >
-      <section className='about-container' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <section className='about-container' style={{
+        display: 'flex', flexDirection: 'column',
+        justifyContent: 'center'
+      }}>
         <i style={{ textAlign: 'center' }}>Hello there</i>
         <div className='arrowd'>&darr;</div>
         <br />
@@ -33,9 +38,9 @@ function About() {
           </div>
         </div>
       </section>
-
+       <Skills />
       <Projects />
-
+      <Contact />
 
     </main>
 

@@ -6,7 +6,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Home from './Pages/Home'
 import About2 from './Pages/About2/About2'
 import Blog from './Pages/Blog/Blog'
-import Image from './Image'
+// import Image from './Image'
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
         <nav>
           <div className='logo'>piyushraj
             <div className='imgWrapper3' style={{ width: '50%', transform: 'scale(.5, .5)' }}>
-              <Image />
+              {/* <Image /> */}
             </div>
           </div>
 
@@ -40,7 +40,7 @@ function App() {
               <Link to='/about'>about</Link>
             </li>
             <li className='underline'>
-              <Link to='/about2'>components</Link>
+              <Link to='/components'>components</Link>
             </li>
             <li className='underline'>
               <Link to='/blog'>blog</Link>
@@ -52,7 +52,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/about2' element={<About2 />} />
+          <Route path='/components' element={<About2 />} />
           <Route path='/blog' element={<Blog />} />
         </Routes>
 
