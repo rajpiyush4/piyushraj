@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <div>will update soon</div>
   )
 }
 

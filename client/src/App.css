@@ -189,7 +189,7 @@ nav ul li:not(:first-child) {
 
 .arrowd {
   position: absolute;
-  bottom: 2rem;
+  bottom: 5.5rem;
   right: 2rem;
   transform: scale(2, 2);
   animation: upanddown 1.5s infinite ease-in-out;

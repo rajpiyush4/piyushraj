@@ -63,10 +63,10 @@ function App() {
               <Link to='/'>home</Link>
             </li>
             <li className='underline'>
-              <Link to='/about'>me</Link>
+              <Link to='/about'>about</Link>
             </li>
             <li className='underline'>
-              <Link to='/about2'>crafts</Link>
+              <Link to='/about2'>components</Link>
             </li>
             <li className='underline'>
               <Link to='/blog'>blog</Link>
