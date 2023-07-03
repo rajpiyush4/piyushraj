@@ -66,7 +66,7 @@ function App() {
               <Link to='/about'>about</Link>
             </li>
             <li className='underline'>
-              <Link to='/about2'>components</Link>
+              <Link to='/components'>components</Link>
             </li>
             <li className='underline'>
               <Link to='/blog'>blog</Link>
