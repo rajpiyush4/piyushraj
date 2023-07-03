@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.16",
+    "graphql": "^16.7.1",
     "gsap": "^3.11.3",
-    "locomotive-scroll": "^4.1.4",
     "matter-js": "^0.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

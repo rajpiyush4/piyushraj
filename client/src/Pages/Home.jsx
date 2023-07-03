@@ -64,27 +64,26 @@ export default function Home() {
     // run the renderer
     Render.run(render);
 
-    for (let i = 0; i < 20; i++) {
-      let ball = Bodies.circle(Math.random() * cw + 200, Math.random() * ch / 2, Math.random() * 20, {
+    for (let i = 0; i < 30; i++) {
+      let ball = Bodies.circle((Math.random())* cw + 200, Math.random() * ch / 2, (Math.random() + .5) * 15, {
         restitution: .7,
         friction: 1,
         render: {
-          fillStyle: 'purple',
           lineWidth: 0
         }
       });
       Composite.add(world, [ball])
     }
 
-    let stack = Composites.stack(cw/2, ch / 2, 5, 5, 0, 0, function (x, y) {
-      return Bodies.rectangle(x, y, Common.random(10, 20), 20, {
-        friction: .5, restitution: 1, density: 0.001, plugin: {
-        },
-      });
-    });
+    // let stack = Composites.stack(cw/2, ch / 2, 5, 5, 0, 0, function (x, y) {
+    //   return Bodies.rectangle(x, y, Common.random(10, 20), 20, {
+    //     friction: .5, restitution: 1, density: 0.001, plugin: {
+    //     },
+    //   });
+    // });
 
 
-    Composite.add(world, stack);
+    // Composite.add(world, stack);
 
 
     let box8 = Bodies.rectangle(cw / 2, ch / 2 - 15, 250, 10, {
@@ -153,16 +152,17 @@ export default function Home() {
 
 
     function moveCar(e) {
-      if (e.key == 'l') {
+      console.log(e)
+      if (e.key == 'ArrowRight') {
         Body.setAngularVelocity(wheel1, 0.5)
         Body.setAngularVelocity(wheel2, 0.5)
 
       }
-      else if (e.key == 'j') {
+      else if (e.key == 'ArrowLeft') {
         Body.setAngularVelocity(wheel1, -0.5)
         Body.setAngularVelocity(wheel2, -0.5)
       }
-      else if (e.key == 'k') {
+      else if (e.key == 'ArrowDown') {
         Body.setAngularVelocity(wheel1, 0)
         Body.setAngularVelocity(wheel2, 0)
       }
@@ -198,6 +198,7 @@ export default function Home() {
 
     // keep the mouse in sync with rendering
     render.mouse = mouse;
+    
 
     // unmount
     return () => {
@@ -224,7 +225,7 @@ export default function Home() {
         <div className='instruction'>
           <div className='inst-container'>
             <div>use these keys to make it more fun (use keyboard)</div>
-            <div> <i>j,k,l --</i> to move and stop</div>
+            <div> <i>arrow keys --</i> to move and stop</div>
             <div> <i>a,w,s,d --</i> to change the gravity </div>
           </div>
         </div>
@@ -233,5 +234,3 @@ export default function Home() {
     </div>
   )
 }
-
-// export default Home

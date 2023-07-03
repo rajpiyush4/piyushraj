@@ -26,10 +26,10 @@ function Start() {
             </RevealBox>
             <RevealBox>
 
-                <div className='words'> will tell you about something, what</div>
+                <div className='words'> will tell you about something, what?</div>
             </RevealBox>
             <RevealBox>
-                <div className='words'> ...I don't know yet  </div>
+                <div className='words'> umm...I don't know yet.  </div>
             </RevealBox>
             <RevealBox>
                 <div className='words'> But I like these words popping on the screen so....  </div>
