@@ -152,7 +152,6 @@ export default function Home() {
 
 
     function moveCar(e) {
-      console.log(e)
       if (e.key == 'ArrowRight') {
         Body.setAngularVelocity(wheel1, 0.5)
         Body.setAngularVelocity(wheel2, 0.5)

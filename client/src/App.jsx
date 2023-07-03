@@ -10,8 +10,6 @@ import Blog from './Pages/Blog/Blog'
 
 function App() {
 
-  console.log("app")
-
   const [loader, setLoader] = useState(true)
 
   useEffect(() => {

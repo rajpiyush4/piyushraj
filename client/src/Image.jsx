@@ -8,7 +8,7 @@ function Image() {
     function useMousePos(e) {
         setMousePosition({ x: e.clientX, y: e.clientY })
     }
-    console.log("image")
+
 
     useEffect(() => {
         window.addEventListener('mousemove', useMousePos)
