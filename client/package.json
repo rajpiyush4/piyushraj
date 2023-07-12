@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "resolutions": {
+    "graphql": "^15.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +13,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.16",
-    "graphql": "^16.7.1",
     "gsap": "^3.11.3",
     "matter-js": "^0.18.0",
     "react": "^18.2.0",

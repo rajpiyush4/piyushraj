@@ -22,7 +22,7 @@ function Hi() {
     return (
         <section className='hi'>
             <RevealBox>
-                <div className='words'>BONJOUR!</div>
+                <div className='words'>work in progress!</div>
             </RevealBox>
          
 

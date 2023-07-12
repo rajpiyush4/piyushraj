@@ -329,7 +329,7 @@ nav ul li:not(:first-child) {
 }
 
 .skills-container::after{
-  content: "worked with:";
+  content: "skills:";
   position: absolute;
   top: -2rem;
   left: 50%;
