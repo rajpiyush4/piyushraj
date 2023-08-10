@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import Loader from './Pages/Loader'
-import About from './Pages/About'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './Pages/Home'
 import Components from './Pages/Components/Components'
