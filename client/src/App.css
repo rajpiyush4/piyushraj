@@ -211,6 +211,15 @@ nav ul li:not(:first-child) {
   border-radius: 1px;
 }
 
+.underline-fix{
+  background-image: linear-gradient(#dde6af, #c24848);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 1px;
+}
+
 .underline:hover {
   background-size: 100% 2px;
 }

@@ -48,7 +48,7 @@ function Loader() {
         <div className='loader'>
             <div className='loader-container'>
                 <div className='loader-animation-container'>
-                    <div style={{ display: 'flex', alignItems: 'flex-end' }}><span style={{ fontFamily: '"Newsreader", serif', marginRight: '1.5rem', fontWeight: '600', fontSize: '5rem', color: '#6f2089' }} ref={splitRef1}><i>hey</i> </span><span ref={splitRef2} style={{ fontSize: '1rem', color: '#212121' ,fontWeight: '900' }}>(•ˋ _ ˊ•)</span></div>
+                    <div style={{ display: 'flex', alignItems: 'flex-end' }}><span style={{ fontFamily: '"Newsreader", serif', marginRight: '1.5rem', fontWeight: '600', fontSize: '5rem', color: '#6f2089' }} ref={splitRef1}><i>bonjour</i> </span><span ref={splitRef2} style={{ fontSize: '3rem', color: '#212121' ,fontWeight: '900' }}>!</span></div>
                 </div>
             </div>
         </div>

@@ -5,13 +5,13 @@ import { ApolloClient } from "@apollo/client";
 //   cache: new InMemoryCache()
 // });
 
-
+``
 function Provider({children}) {
   return (
+    <></>
     // <ApolloProvider client={client}>
-        
-        <>{children}</>
-        // </ApolloProvider>
+    //     <>{children}</>
+    //     </ApolloProvider>
   )
 }
 

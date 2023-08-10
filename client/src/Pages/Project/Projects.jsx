@@ -26,14 +26,14 @@ let projects = [
     img: 'https://drive.google.com/uc?export=view&id=15LOib76U6xpNbhxU97g3bwpOjECDcmuM',
     link:"https://github.com/rajpiyush4/cssPositionVis"
   },
-  {
-    id: "4",
-    name: "this portfolio",
-    description: "to help me in my branding and to show my work",
-    tech: "react.js, gsap, graphql, apollo-server, mongodb",
-    img: "https://drive.google.com/uc?export=view&id=15EzYyH3ay7IAD8OcwCx8CKA_vrle1Ixv",
-    link: "https://github.com/rajpiyush4/piyushraj"
-  }
+  // {
+  //   id: "4",
+  //   name: "this portfolio",
+  //   description: "to help me in my branding and to show my work",
+  //   tech: "react.js, gsap, graphql, apollo-server, mongodb",
+  //   img: "https://drive.google.com/uc?export=view&id=15EzYyH3ay7IAD8OcwCx8CKA_vrle1Ixv",
+  //   link: "https://github.com/rajpiyush4/piyushraj"
+  // }
 
 ]
 
