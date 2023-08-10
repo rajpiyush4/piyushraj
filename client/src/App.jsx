@@ -56,7 +56,6 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/' element={<About />} />
           <Route path='/components/*'>
             <Route index element={<Components />} />
             <Route path='searchTab' element={<SearchTab />} />
