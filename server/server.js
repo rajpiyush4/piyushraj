@@ -3,8 +3,12 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import mongoose from 'mongoose';
 import typeDefs from './graphql/typeDefs.js';
 import resolvers from './graphql/resolvers.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const Mongo = 'mongodb+srv://rajpiyush592:blo213g@cluster0.7qysnmd.mongodb.net/'
+
+
+const Mongo = process.env.MONGO_CREDENTIALS
 
 
 const server = new ApolloServer({
