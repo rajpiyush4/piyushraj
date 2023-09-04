@@ -1,26 +1,44 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Projects from './Project/Projects'
 import Contact from './Contact'
 import Skills from './Skills'
+import Image from './Image'
 
 function Home() {
+  const ImgContainerRef = useRef(null)
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    setShow(true)
+    return () => {
+      setShow(false)
+    }
+  }, [ImgContainerRef.current])
 
   return (
     <main className='about' >
-      <section className='about-container' style={{
-        display: 'flex', flexDirection: 'column',
-        justifyContent: 'center'
-      }}>
-        <i style={{ textAlign: 'center' }}>Hello there</i>
+
+      <section className='about-container'
+        style={{
+          display: 'flex', flexDirection: 'column',
+          justifyContent: 'center'
+        }}
+      >
+        <i className='hello' style={{ textAlign: 'center' }}>Hello there</i>
         <div className='arrowd'>&darr;</div>
         <br />
-        <div style={{ width: 'fit-content' }}>
-          <div className='about-me'> I'm a passionate programmer who has been actively exploring front-end development. I've gained valuable experience in this field and have been enjoying the process of creating user interfaces and interactive web experiences and solving problems.
+          <div className='about-me'>
+            <p ref={ImgContainerRef}>
+              I'm a web developer based in India. A passionate programmer. I make websites, web applications with design ideas I steal from here and there (mostly from awwwards).
+            </p>
+              <div className='imgWrapper3' >
+                {show && <Image container={ImgContainerRef.current} />}
+              </div>
+
           </div>
-        </div>
       </section>
-       <Skills />
       <Projects />
+      <Skills />
       <Contact />
 
     </main>

@@ -7,7 +7,7 @@ let data = ['apple', 'banana', 'peach', 'papaya', 'amrood', 'nimbu', 'kathal'];
 function SearchTab() {
     const [show, setShow] = useState(false)
     const [list, setList] = useState([])
-    const [value, setValue] = useState('a')
+    const [value, setValue] = useState('')
     const inpRef = useRef(null)
     const searchResultRef = useRef(null)
 

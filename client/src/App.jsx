@@ -9,7 +9,7 @@ import Blog from './Pages/Blog/Blog'
 
 const links = [
   { to: '/', label: 'home' },
-  { to: '/components/', label: 'components' },
+  { to: '/components/', label: 'random' },
   { to: '/blog', label: 'blog' }
 ];
 
@@ -35,9 +35,6 @@ function App() {
 
         <nav>
           <div className='logo'>piyushraj
-            <div className='imgWrapper3' style={{ width: '50%', transform: 'scale(.5, .5)' }}>
-              {/* <Image /> */}
-            </div>
           </div>
 
           <ul className='nav1'>

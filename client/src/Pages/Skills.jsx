@@ -1,6 +1,6 @@
 import React from 'react'
 
-const skills = ['javascript', 'c++', 'react', 'next','gsap','css', 'node', 'express','graphql','apollo', 'mongoDB', 'git', 'github']
+const skills = ['javascript', 'canvas', 'c++', 'oops', 'react', 'next','gsap', 'tailwind','css', 'node', 'express','graphql','apollo', 'mongoDB', 'rest-api', 'git', 'github']
 
 function Skills() {
   return (
