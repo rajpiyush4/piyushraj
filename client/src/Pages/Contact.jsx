@@ -17,7 +17,7 @@ function Contact() {
                 <li> <span className='underline'> <a href="https://www.linkedin.com/in/piyush-raj-4469671a7" target='_blank'>linkedin</a> </span> ↗</li> 
                 <li> <span className='underline'><a href="https://twitter.com/piyushr001" target='_blank'>twitter</a> </span> ↗</li>
                 <li>  <span className='underline' ><a href="https://github.com/rajpiyush4" target='_blank'>github</a> </span> ↗</li>
-                <li>  <span className='underline' ><a href="https://drive.google.com/file/d/1_aFhzB570xYCGnIHGKu09lT8yCOK0lt0/view?usp=drivesdk" target='_blank'>resume</a> </span> ↗</li>
+                <li>  <span className='underline' ><a href="https://www.dropbox.com/scl/fi/9dz1xxh13fd59lr63562a/Resume-1.pdf?rlkey=dp9zb5p9d2frnsovm2m22po12&dl=0" target='_blank'>resume</a> </span> ↗</li>
            </ul>
            </div>
         </div>
