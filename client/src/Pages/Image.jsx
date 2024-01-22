@@ -39,7 +39,7 @@ function Image({container}) {
                         width: '350px',
                         height: '600px',
                         // https://drive.google.com/file/d/1WX2SohrKjLAPRZE5kVDf-f9m6ixzNx2W/view?usp=share_link
-                    }} src='https://drive.google.com/uc?export=view&id=14slZMEy_lD-meGfateaIXLKVcTam88O4' alt="" />
+                    }} src='https://drive.google.com/thumbnail?id=14slZMEy_lD-meGfateaIXLKVcTam88O4&sz=w1500' alt="me" />
                 </ImageWrapper>
             </div>
         </>
