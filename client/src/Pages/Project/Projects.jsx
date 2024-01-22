@@ -8,7 +8,7 @@ let projects = [
     name: "The soul project",
     description: "A project to help the soul",
     tech: "html, css , vanilla js, html5 canvas",
-    img: 'https://drive.google.com/uc?export=view&id=15LF0VBioAtpDuBE9s3zi21fe4kKdHs9K',
+    img: 'https://drive.google.com/thumbnail?id=15LF0VBioAtpDuBE9s3zi21fe4kKdHs9K&sz=w1500',
     link: "https://sound-env.vercel.app",
     git:'https://github.com/rajpiyush4/sound-env'
   },
@@ -16,7 +16,7 @@ let projects = [
     id: "2",
     name: "The WeMatched! ",
     description: "Dating web app landing page",
-    img: "https://drive.google.com/uc?export=view&id=15Ekwu46a_P3f8b5-PdND6MvFakl7JCS1",
+    img: "https://drive.google.com/thumbnail?id=15Ekwu46a_P3f8b5-PdND6MvFakl7JCS1&sz=w1500",
     tech: "react.js, framer-motion, css",
     link: 'https://wematched.vercel.app', 
     git: "https://github.com/rajpiyush4/WeMatched-landingpage"
@@ -27,7 +27,7 @@ let projects = [
     name: "The css-position project",
     description: "A project that helps you to visualise and understand css position",
     tech: "html, css, vanilla js",
-    img: 'https://drive.google.com/uc?export=view&id=15LOib76U6xpNbhxU97g3bwpOjECDcmuM',
+    img: 'https://drive.google.com/thumbnail?id=15LOib76U6xpNbhxU97g3bwpOjECDcmuM&sz=w1500',
     link:"https://css-position.vercel.app",
     git:'https://github.com/rajpiyush4/cssPositionVis'
   },
@@ -36,7 +36,7 @@ let projects = [
     name: "Rick and Morty",
     description: "Used Deboucing to optimise network load",
     tech: "react.js, tailwind, rest-api, typescript",
-    img: "https://drive.google.com/uc?export=view&id=179ba8vCJ9_IxX2C1OFMxb-FEXVXWVV2M",
+    img: "https://drive.google.com/thumbnail?id=179ba8vCJ9_IxX2C1OFMxb-FEXVXWVV2M&sz=w1500",
     link: "https://rickmorty-pied.vercel.app/",
     git:'https://github.com/rajpiyush4/rickandmorty'
   },
@@ -44,13 +44,12 @@ let projects = [
     id: "5",
     name: "The WeMatched! project",
     description: "A project (a dating website) that helps you to find your match: (worked as ui engineer)",
-    img: "https://drive.google.com/uc?export=view&id=15Ekwu46a_P3f8b5-PdND6MvFakl7JCS1",
+    img: "https://drive.google.com/thumbnail?id=15Ekwu46a_P3f8b5-PdND6MvFakl7JCS1&sz=w1500",
     tech: "react.js, node.js, express.js, socket.io, mongodb, google-auth",
     link:'',
     github:''
 
   }
-
 
 ]
 
