@@ -9,15 +9,16 @@ import Blog from './Pages/Blog/Blog'
 
 const links = [
   { to: '/', label: 'home' },
-  { to: '/components/', label: 'random' },
+  { to: '/components', label: 'random' },
   { to: '/blog', label: 'blog' }
 ];
 
 function App() {
-
-  const [loader, setLoader] = useState(true)
-  const [underline, setUnderline] = useState(null)
-
+ const on = window.location.pathname || undefined
+ const [loader, setLoader] = useState(true)
+ const [underline, setUnderline] = useState(on)
+ console.log(on, underline)
+ 
   const handleLine = (index) => {
     setUnderline(index)
   }
@@ -41,8 +42,8 @@ function App() {
             {links.map((link, index) => (
               <li
                 key={index}
-                className={`${ underline === index ? 'underline-fix' : ''} underline`}
-                onClick={() => handleLine(index)}
+                className={`${ underline === link?.to ? 'underline-fix' : ''} underline`}
+                onClick={() => handleLine(link?.to)}
               >
                 <Link to={link.to}>{link.label}</Link>
               </li>
@@ -63,7 +64,8 @@ function App() {
         </Routes>
 
 
-        <footer style={{ position: 'fixed', bottom: '0', left: '0', background: 'whitesmoke', height: '5rem', width: '100%' }}  >
+  
+        <footer style={{ position: 'fixed', bottom: '0', left: '0', background: 'whitesmoke', height: '5rem', width: '100%', borderTop: '1px solid rgba(0, 0, 0, .2) ' }}  >
           <ul className='nav2'>
           {links.map((link, index) => (
               <li

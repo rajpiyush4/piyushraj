@@ -6,11 +6,8 @@
   grid-gap: 3rem 2rem;
   place-content: center;
   color: rgba(0, 0, 0, .7);
-  background-color: white;
-  padding: 3rem;
-  margin-top: 1rem;
-
-
+  background-color: beige;
+  padding: 4rem;
 }
 
 .project {
@@ -23,6 +20,8 @@
   overflow: hidden;
   margin: auto;
   margin-bottom: 1rem;
+  border: 1px solid rgba(5, 46, 5, .3);
+  border-radius: 5px;
 }
 
 .project-img img {
@@ -30,6 +29,10 @@
   height: 100%;
   object-fit: cover;
   transition: .3s;
+}
+.project-img img:hover{
+  object-fit: contain;
+  transform: scale(1.1);
 }
 
 
