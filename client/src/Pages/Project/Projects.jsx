@@ -24,6 +24,15 @@ let projects = [
   },
   {
     id: "3",
+    name: 'gratify',
+    description: "Share your daily moments of thankfulness", 
+    tech: "nextjs, typescript, tailwind, mongodb, next-auth",
+    img:'gratify.png',
+    link: '#',
+    git: "https://github.com/rajpiyush4/gratify"
+  },
+  {
+    id: "4",
     name: "The css-position project",
     description: "A project that helps you to visualise and understand css position",
     tech: "html, css, vanilla js",
@@ -32,7 +41,7 @@ let projects = [
     git:'https://github.com/rajpiyush4/cssPositionVis'
   },
   {
-    id: "4",
+    id: "5",
     name: "Rick and Morty",
     description: "Used Deboucing to optimise network load",
     tech: "react.js, tailwind, rest-api, typescript",
@@ -41,7 +50,7 @@ let projects = [
     git:'https://github.com/rajpiyush4/rickandmorty'
   },
   {
-    id: "5",
+    id: "6",
     name: "Insight Dashboard",
     description: "Dynamically added data from spreadsheet and made charts",
     tech: "react.js, tailwind, typescript, xlsx lib",
@@ -50,7 +59,7 @@ let projects = [
     git: "https://github.com/rajpiyush4/insight-dashboard"
   },
   {
-    id: '6',
+    id: '7',
     name: 'e-commerce',
     description:"simple ui clone",
     tech: 'nextjs, typescript, tailwind api',
@@ -58,15 +67,6 @@ let projects = [
     link: "https://aecommerce.vercel.app/",
     git: "https://github.com/rajpiyush4/e-commerce"
 
-  },
-  {
-    id: "7",
-    name: 'gratify',
-    description: "Share your daily moments of thankfulness", 
-    tech: "nextjs, typescript, tailwind, mongodb, next-auth",
-    img:'gratify.png',
-    link: '',
-    git: "https://github.com/rajpiyush4/gratify"
   },
   // {
   //   id: "8",
@@ -97,7 +97,7 @@ function Projects() {
             <div style={{padding:'.3rem', fontWeight:'800'}}>
 
               <a href={item?.link} style={{marginRight:'.5rem', cursor:'pointer'}} target='_blank'>link </a>
-              <a href={item?.github} style={{cursor:'pointer'}}  target='_blank'>github </a>
+              <a href={item?.git} style={{cursor:'pointer'}}  target='_blank'>github </a>
               </div>
 
           </div>
