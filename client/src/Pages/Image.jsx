@@ -1,37 +1,35 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, forwardRef } from 'react'
 import { ImageWrapper } from './Custom-Component/StyledComp'
 
-
-function Image({container}) {
+const Image = forwardRef((props, ref) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
     function useMousePos(e) {
         setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
-
     useEffect(() => {
-        container?.addEventListener('mousemove', useMousePos)
+        const el = ref?.current;
+        if (!el) return;
+        console.log(el)
+        el.addEventListener('mousemove', useMousePos);
+        return () => el.removeEventListener('mousemove', useMousePos);
+    }, []);
 
-        return () => {
-            container?.removeEventListener('mousemove', useMousePos)
-        };
-    }, [])
     return (
         <>
             <div className='imgWrapper-wrapper' style={{
                 position: 'absolute',
                 padding: "2rem",
                 background: 'rgb(229 221 214)',
-                transform: `translate(${mousePosition.x+175}px, ${mousePosition.y-650}px)`,  //remove the magic numbers
-                zIndex:'1'
- 
+                transform: `translate(${mousePosition.x + 175}px, ${mousePosition.y - 650}px)`,  //remove the magic numbers
+                zIndex: '1'
+
             }}>
-                
+
                 {/* https://drive.google.com/file/d/14slZMEy_lD-meGfateaIXLKVcTam88O4/view?usp=sharing */}
                 <ImageWrapper>
                     <img style={{
-                        objectFit:'cover',
+                        objectFit: 'cover',
                         position: 'absolute',
                         left: '50%',
                         top: '50%',
@@ -44,6 +42,6 @@ function Image({container}) {
             </div>
         </>
     )
-}
+});
 
 export default Image

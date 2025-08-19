@@ -6,12 +6,22 @@ function Components() {
 
 
   return (
-    <div className='components'>
-      <ul className='components-list'>
-        <li><Link to='/components/searchTab'>Search Tab</Link></li>
-        <li> <Link to='/components/car'>Car Game</Link></li>
+    <section className="components">
+      <h2 className="components-title">Components</h2>
+      <ul className="components-list">
+        <li>
+          <Link to="/components/searchTab" className="component-card">
+            <span className="component-name">Search Tab</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/components/car" className="component-card">
+            <span className="component-name">Car Game</span>
+          </Link>
+        </li>
       </ul>
-    </div>
+    </section>
+
   )
 }
 

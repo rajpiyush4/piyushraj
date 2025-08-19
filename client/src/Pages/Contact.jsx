@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Contact() {
     return (
         <section className='contact'>
@@ -17,7 +15,7 @@ function Contact() {
                 <li> <span className='underline'> <a href="https://www.linkedin.com/in/piyush-raj-4469671a7" target='_blank'>linkedin</a> </span> ↗</li> 
                 <li> <span className='underline'><a href="https://twitter.com/piyushr001" target='_blank'>twitter</a> </span> ↗</li>
                 <li>  <span className='underline' ><a href="https://github.com/rajpiyush4" target='_blank'>github</a> </span> ↗</li>
-                <li>  <span className='underline' ><a href="https://www.dropbox.com/scl/fi/wrwwmnq7jz9kj119uyz5i/rajpiyush.pdf?rlkey=pforasx4kogh1ofe4tj19nkbm&dl=0" target='_blank'>resume</a> </span> ↗</li>
+                <li>  <span className='underline' ><a href="https://www.dropbox.com/scl/fi/mlfzbvqqahveqzrtss60r/piyush_raj_25.pdf?rlkey=r0ykgpt3mpncf1ypklqgt179p&st=r9hl4dvn&dl=0" target='_blank'>resume</a> </span> ↗</li>
            </ul>
            </div>
         </div>
