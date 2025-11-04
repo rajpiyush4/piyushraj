@@ -22,7 +22,7 @@ function Blog() {
   const { loading, error, data } = useQuery(GET_BLOGS)
 
   if (loading) return <div className='Blog'>Loading...</div>;
-  if (error) return <div className='Blog'>Working on it!!</div>;;
+  if (error) return <div className='Blog'>No Data!!</div>
 
   return (
     <div className='Blog'>

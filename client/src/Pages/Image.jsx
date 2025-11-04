@@ -1,19 +1,18 @@
 import { useState, useEffect, forwardRef } from 'react'
 import { ImageWrapper } from './Custom-Component/StyledComp'
 
-const Image = forwardRef((props, ref) => {
+const Image = forwardRef(function ImageComponent(props, ref){
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
     function useMousePos(e) {
         setMousePosition({ x: e.clientX, y: e.clientY })
     }
-
+    
     useEffect(() => {
         const el = ref?.current;
         if (!el) return;
-        console.log(el)
         el.addEventListener('mousemove', useMousePos);
         return () => el.removeEventListener('mousemove', useMousePos);
-    }, []);
+    }, [ref]);
 
     return (
         <>

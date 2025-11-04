@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import Projects from './Project/Projects'
 import Contact from './Contact'
 import Skills from './Skills'
@@ -6,14 +6,6 @@ import Image from './Image'
 
 function Home() {
   const imgContainerRef = useRef(null)
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    setShow(true)
-    return () => {
-      setShow(false)
-    }
-  }, []);
 
   return (
     <main className='about' >
@@ -30,7 +22,7 @@ function Home() {
           <p ref={imgContainerRef}>
             I’m a web developer from India who loves bringing ideas to life on the web. A curious programmer at heart, I build websites and web apps with a blend of code, creativity, and a little design inspiration I shamelessly ‘borrow’ (okay fine, steal) from places like Awwwards            </p>
           <div className='imgWrapper3' >
-            {show && <Image ref={imgContainerRef} />}
+            <Image ref={imgContainerRef} />
           </div>
 
         </div>

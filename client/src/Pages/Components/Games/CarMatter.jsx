@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import Matter from 'matter-js'
-import { Engine, World, Render, Bodies, Body, Constraint, MouseConstraint, Mouse, Composite, Composites } from 'matter-js'
+import { Engine, World, Render, Bodies, Body, Constraint, MouseConstraint, Mouse, Composite, } from 'matter-js'
 import Back from '../Back'
 
 
@@ -21,7 +21,7 @@ export default function CarMatter() {
     window.addEventListener('keypress', updateGravity)
     window.addEventListener('touchstart', touchMove)
 
-    function touchMove(e) {
+    function touchMove() {
       // e.preventDefault()
       engine.gravity.y = -1
       engine.gravity.x = 0

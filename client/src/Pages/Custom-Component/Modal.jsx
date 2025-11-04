@@ -1,4 +1,3 @@
-import {useState} from 'react'
 
 const modalStyle = {
     position: 'fixed',
@@ -22,7 +21,6 @@ const modalContainerStyle = {
 }
 
 function Modal() {
-    const [showModal, setShowModal] = useState(false)
 
   return (
     <div className='modal-type-page'  style={modalStyle}>

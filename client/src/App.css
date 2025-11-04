@@ -700,3 +700,14 @@ nav ul li:not(:first-child) {
     padding: 2rem;
   }
 }
+
+
+.fade-container {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
