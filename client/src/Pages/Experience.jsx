@@ -7,10 +7,8 @@ function Experience() {
             location: "Delhi, India",
             period: "2025 — Present",
             bullets: [
-                "Architected AI-powered accounting workflows, leveraging LLM integration to streamline bookkeeping processes.",
-                "Designed a scalable AI-assisted bank categorisation engine with structured outputs to automate transaction naming.",
-                "Engineered core modules for Bank Register, List, and Reconciliation — prioritising state consistency and low-latency rendering.",
-                "Built robust data ingestion pipelines for migrating financial records from legacy platforms across complex schema mappings.",
+                "Led frontend architecture for AI-assisted bank categorization, translating product specs into intuitive Next.js & TypeScript user flows.",
+                "Built core reconciliation modules and QuickBooks data migration pipelines, focusing on seamless user-facing financial workflows.",
             ],
         },
         {
@@ -20,10 +18,8 @@ function Experience() {
             location: "Delhi, India",
             period: "2024 — 2025",
             bullets: [
-                "Engineered interactive reporting modules, optimising data accessibility for end-users.",
-                "Designed a flexible data export engine, reducing engineering overhead via dynamic schema selection.",
-                "Integrated international top-up services, managing complex transaction states and API error handling for cross-border payments.",
-                "Optimised real-time notification systems using Socket.io to enhance event-driven collaboration.",
+                "Designed interactive reporting and dynamic export tools to make complex financial data instantly accessible for end-users.",
+                "Engineered cross-border payment top-ups and real-time Socket.io notifications to elevate user engagement and transaction reliability.",
             ],
         },
     ];
