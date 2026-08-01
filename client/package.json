@@ -20,6 +20,9 @@
     "split-type": "^0.3.3",
     "styled-components": "^6.0.5"
   },
+  "engines": {
+    "node": ">=24.x"
+  },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
