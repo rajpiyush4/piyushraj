@@ -7,7 +7,7 @@
 }
 
 :root {
-  --outline: 'Outfit', sans-serif;
+  --font-main: 'Outfit', sans-serif;
   --PrimaryColor: #6f2089;
   --secondaryColor: #F5F2FE;
   --secondaryColor2: #15131b;
@@ -20,7 +20,7 @@ html {
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: var(--outline);
+  font-family: var(--font-main);
   font-size: 15px;
 }
 
@@ -144,7 +144,6 @@ nav {
   transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
   pointer-events: none;
   z-index: 1
-
 }
 
 .logo:hover .imgWrapper3 {
@@ -156,7 +155,7 @@ nav {
   height: 300px;
 }
 
-.nav1 li{
+.nav1 li {
   display: grid;
   place-content: center;
 }
@@ -178,7 +177,7 @@ nav ul li:not(:first-child) {
 
 .resume-link {
   padding: 0.5rem .6rem;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -189,7 +188,7 @@ nav ul li:not(:first-child) {
 }
 
 .resume-link:hover {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   color: #000;
 }
 
@@ -221,13 +220,78 @@ nav ul li:not(:first-child) {
 
 .about-me {
   position: relative;
-  padding: 0 1rem;
+  padding: 0 2rem;
   text-align: center;
-  font-weight: 400;
-  font-size: clamp(1.1rem, 2vw, 2.5rem);
 }
 
-.about-me p{
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: white;
+  margin: 0 0 0.4rem;
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.5rem;
+}
+
+.hero-bio {
+  position: relative;
+  z-index: 50;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+  margin: 0 auto 2rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.cta-btn {
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background: white;
+  color: var(--PrimaryColor);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn--outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+.cta-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.about-me p {
   position: relative;
   z-index: 50;
 }
@@ -247,7 +311,7 @@ nav ul li:not(:first-child) {
   border-radius: 1px;
 }
 
-.underline-fix{
+.underline-fix {
   background-image: linear-gradient(#dde6af, #c24848);
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -355,6 +419,7 @@ nav ul li:not(:first-child) {
   right: 4rem;
   background: rgb(24, 24, 21);
 }
+
 /* 
 .skills {
   width: 100%;
@@ -399,7 +464,8 @@ nav ul li:not(:first-child) {
 .skills {
   width: 100%;
   height: 90vh;
-  background-color: #BBDCE5; /* light pastel background */
+  background-color: #BBDCE5;
+  /* light pastel background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,8 +485,9 @@ nav ul li:not(:first-child) {
 .skills-container::after {
   content: "skills";
   position: absolute;
+  top: -3rem;
   left: 50%;
-  transform: translate(-50%, -300%);
+  transform: translateX(-50%);
   font-weight: 600;
   font-size: 1.2rem;
   color: #222;
@@ -434,7 +501,8 @@ nav ul li:not(:first-child) {
   gap: 0.5rem;
 }
 
-.skills-menu button {
+.skills-menu button,
+.menu-item {
   padding: 0.75rem 1rem;
   background-color: transparent;
   outline: none;
@@ -447,16 +515,18 @@ nav ul li:not(:first-child) {
   transition: all 0.2s ease;
 }
 
-.skills-menu button:hover {
+.skills-menu button:hover,
+.menu-item:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #111;
 }
 
-.skills-menu button.active {
+.skills-menu button.active,
+.menu-item.active {
   background-color: rgba(255, 255, 255, 0.8);
   color: #000;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Right content */
@@ -510,7 +580,8 @@ nav ul li:not(:first-child) {
   background-color: white;
   cursor: pointer;
 }
-.skill:hover{
+
+.skill:hover {
   box-shadow: -5px 5px 0px rgba(0, 0, 0, .2);
   transform: translate(3px, -3px)
 }
@@ -561,9 +632,9 @@ nav ul li:not(:first-child) {
 .email {
   position: relative;
   cursor: pointer;
-  font-family: fantasy;
+  font-family: var(--font-main);
   font-size: clamp(2rem, 6vw, 4rem);
-
+  font-weight: 600;
 }
 
 .email::after {
@@ -572,7 +643,10 @@ nav ul li:not(:first-child) {
   top: -.5rem;
   right: 0%;
   font-size: 10px;
-  font-family: 'Outline'
+  font-family: var(--font-main);
+  font-weight: 300;
+  color: rgba(7, 58, 7, 0.6);
+  white-space: nowrap;
 }
 
 
@@ -708,6 +782,170 @@ nav ul li:not(:first-child) {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Experience ──────────────────────────────────────── */
+.experience {
+  width: 100%;
+  background: whitesmoke;
+  padding: 5rem 4rem;
+  margin-bottom: 0;
+}
+
+.experience-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.exp-heading,
+.edu-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  color: rgba(0, 0, 0, .35);
+  margin-bottom: 3rem;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 2.5rem;
+  align-items: start;
+}
+
+.exp-period {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, .4);
+  letter-spacing: 0.5px;
+  padding-top: 0.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.exp-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, .85);
+  margin: 0;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  color: var(--PrimaryColor);
+  font-weight: 500;
+}
+
+.exp-bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exp-bullets li {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, .65);
+}
+
+/* ── Education ───────────────────────────────────────── */
+.education {
+  width: 100%;
+  background: whitesmoke;
+  padding: 0 4rem 5rem;
+}
+
+.education-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  padding-top: 3rem;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 2.5rem;
+  align-items: start;
+}
+
+.edu-period {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, .4);
+  letter-spacing: 0.5px;
+  padding-top: 0.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.edu-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, .85);
+  margin: 0 0 0.3rem;
+}
+
+.edu-school {
+  font-size: 0.9rem;
+  color: var(--PrimaryColor);
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+}
+
+.edu-cgpa {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, .45);
+  margin: 0;
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+
+  .experience,
+  .education {
+    padding: 3rem 1.5rem;
+  }
+
+  .education {
+    padding-top: 0;
+  }
+
+  .education-inner {
+    padding-top: 2rem;
+  }
+
+  .exp-item,
+  .edu-item {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .exp-period,
+  .edu-period {
+    color: rgba(0, 0, 0, .3);
+    font-size: 0.75rem;
+  }
 }

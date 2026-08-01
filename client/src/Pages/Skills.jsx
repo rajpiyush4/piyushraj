@@ -1,14 +1,25 @@
 import { useState } from "react";
 
 const skills = {
-  core: ['C++', 'Javascript', 'Typescript', 'SQL', 'HTML5', 'CSS3', 'Git/Github', 'RestAPI'],
-  frontend: ['React', 'Next', 'GSAP', 'Framer-motion', 'Redux-Toolkit', 'Vite', 'Tailwind'],
-  backend: ['Node', 'express', 'socket', 'jwt', 'passport', 'mongodb', 'postgres'],
-  tools: ['vscode', 'figma', 'adobe-illustrator', 'linux', 'github'],
+  languages: ['TypeScript', 'JavaScript', 'C++', 'Python', 'HTML5', 'CSS3', 'SQL'],
+  frontend: ['React', 'Next.js', 'Tailwind CSS', 'Zustand', 'Framer Motion', 'GSAP', 'Radix UI', 'Vite'],
+  backend: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Socket.io', 'JWT', 'Passport'],
+  databases: ['MongoDB', 'PostgreSQL', 'Prisma'],
+  ai: ['LLM Orchestration', 'Tool Calling', 'Structured Outputs', 'Real-time Streaming', 'Prompt Engineering', 'AI SDK Integration', 'Voice AI'],
+  tools: ['Git', 'GitHub', 'Postman', 'Figma', 'VS Code', 'Agile/Scrum', 'Linux'],
+}
+
+const tabLabels = {
+  languages: 'languages',
+  frontend: 'frontend',
+  backend: 'backend',
+  databases: 'databases',
+  ai: 'ai eng.',
+  tools: 'tools',
 }
 
 function Skills() {
-  const [skillSelected, setSkillSelected] = useState('core');
+  const [skillSelected, setSkillSelected] = useState('languages');
   const selected = skills[skillSelected];
 
   return (
@@ -22,24 +33,23 @@ function Skills() {
               onClick={() => setSkillSelected(item)}
               className={`menu-item ${skillSelected === item ? 'active' : ''}`}
             >
-              {item.toLowerCase()}
+              {tabLabels[item]}
             </button>
           ))}
         </div>
 
         <div className="skills-content">
-          <h3>{skillSelected.toLowerCase()}</h3>
+          <h3>{tabLabels[skillSelected]}</h3>
           <div className="skill-tags">
             {selected.map(item => (
               <span key={item} className="tag">
-                {item.toLowerCase()}
+                {item}
               </span>
             ))}
           </div>
         </div>
       </div>
     </section>
-
   )
 }
 
